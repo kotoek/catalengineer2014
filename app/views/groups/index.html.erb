@@ -1,0 +1,24 @@
+
+<h1>Listing Groups</h1>
+
+<table>
+  <thread>
+     <tr>
+         <th>Id</th>
+         <th>name</th>
+         <th></th>
+     </tr>
+  </thread>
+
+  <tbody>
+     <% @groups.each do |group| %>
+        <tr>
+            <td><%= group.id %></td>
+            <td><%= group.name %></td>
+            <td><%= link_to 'Show', group_path(group.id) %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_group_path %>
